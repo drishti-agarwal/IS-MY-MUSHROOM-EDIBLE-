@@ -30,7 +30,7 @@ def main():
     st.sidebar.markdown("Apply Machine Learning models to know the statistic...")
     @st.cache(persist=True)
     def load_data():
-        data = pd.read_csv("D:\coursera\mushroom.csv")
+        data = pd.read_csv("./mushroom.csv")
         label =LabelEncoder()
         for i in data.columns:
             data[i] = label.fit_transform(data[i])
